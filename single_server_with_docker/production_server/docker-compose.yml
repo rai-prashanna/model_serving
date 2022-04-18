@@ -19,8 +19,7 @@ services:
       - "5672:5672"
       - "15672:15672"
   worker_1:
-    build:
-      context: .
+    image: patrick931024/prai-c2
     hostname: worker_1
     entrypoint: celery
     command: -A workerA worker --loglevel=debug
